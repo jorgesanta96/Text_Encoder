@@ -58,11 +58,21 @@
         var encryptBttn = document.getElementById('encrypt-bttn');
         encryptBttn.onclick = encryptText;
 
-        // La letra "e" es convertida para "enter"
-        // La letra "i" es convertida para "imes"
-        // La letra "a" es convertida para "ai"
-        // La letra "o" es convertida para "ober"
-        // La letra "u" es convertida para "ufat"
+        function decryptText () {
+            var inputText = document.getElementById('input-text').value;
+            var resultText = document.getElementById("result-text");
+
+            inputText = inputText.replaceAll('enter', 'e');
+            inputText = inputText.replaceAll('imes', 'i');
+            inputText = inputText.replaceAll('ai', 'a');
+            inputText = inputText.replaceAll('ober', 'o');
+            inputText = inputText.replaceAll('ufat', 'u');
+
+            resultText.innerHTML = inputText;
+        }
+
+        var decryptBttn = document.getElementById('decrypt-bttn');
+        decryptBttn.onclick = decryptText;
 
     </script>
     
