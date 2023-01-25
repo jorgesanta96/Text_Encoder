@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encoder</title>
+</head>
+<body>
+
+    <main>
+        <input type="text" id="input-text" placeholder="Ingrese el texto aqui">
+
+        <button id="encrypt-bttn">Encriptar</button>
+        <button id="decrypt-bttn">Desencriptar</button>
+
+        <div id="result-text">
+            
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy Copyright Jorge Andres Salazar Santa 2023</p>
+        <p>Imagenes con links de Github, linkedIn</p>
+    </footer>
+
+    <script>
+
+        function encryptText () {
+            var inputText = document.getElementById('input-text').value;
+            var resultText = document.getElementById("result-text");
+            var result = '';
+
+            for (var i = 0; i < inputText.length; i++) {
+                if (inputText[i] == 'e') {
+                    result += 'enter';
+                } 
+                else if (inputText[i] == 'i') {
+                    result += 'imes';
+                }
+                else if (inputText[i] == 'a') {
+                    result += 'ai';
+                }
+                else if (inputText[i] == 'o') {
+                    result += 'ober';
+                }
+                else if (inputText[i] == 'u') {
+                    result += 'ufat';
+                }
+                else {
+                    result += inputText[i];
+                }
+            }
+
+            resultText.innerHTML = result;
+        }
+
+        var encryptBttn = document.getElementById('encrypt-bttn');
+        encryptBttn.onclick = encryptText;
+
+        // La letra "e" es convertida para "enter"
+        // La letra "i" es convertida para "imes"
+        // La letra "a" es convertida para "ai"
+        // La letra "o" es convertida para "ober"
+        // La letra "u" es convertida para "ufat"
+
+    </script>
+    
+</body>
+</html>
