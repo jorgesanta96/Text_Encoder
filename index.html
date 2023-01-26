@@ -17,6 +17,8 @@
             
         </div>
 
+        <button id="copy-bttn">Copiar</button>
+
     </main>
 
     <footer>
@@ -73,6 +75,16 @@
 
         var decryptBttn = document.getElementById('decrypt-bttn');
         decryptBttn.onclick = decryptText;
+
+        function copyText() {
+            var text = document.getElementById('result-text').innerText;
+
+            var inputText = document.getElementById('input-text');
+            inputText.value = text;
+        }
+
+        var copyBttn = document.getElementById('copy-bttn');
+        copyBttn.onclick = copyText;
 
     </script>
     
