@@ -1,0 +1,125 @@
+body{
+    background: #E5E5E5;
+}
+
+#alura-logo {
+    /* position: absolute; */
+    left: 36.67%;
+    right: 37.43%;
+    top: 0%;
+    bottom: 0%;
+}
+
+#alerta-img {
+    position: absolute;
+    left: 240px;
+    top: 140px;
+}
+
+.info-message{
+    position: absolute;
+    left: 260px;
+    top: 115px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 150%;
+
+    color: darkblue;
+    font-weight: bold;
+
+    opacity: 0.8;
+}
+
+#input-text {
+    position: absolute;
+    width: 40%;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;    
+    color: #0A3871;
+}
+
+#result-text{
+    position: absolute;
+    width: 400px;
+    height: 80%;
+    left: 1000px;
+    top: 40px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+#encrypt-bttn{   
+    width: 328px;
+    height: 67px;
+    position: absolute;
+    left: 240px;
+    top: 560px;
+        
+    background: #0A3871;
+    border-radius: 24px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#decrypt-bttn{
+    width: 328px;
+    height: 67px;
+    position: absolute;
+    left: 600px;
+    top: 560px;
+        
+    background: #D8DFE8;
+    border-radius: 24px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #0A3871;    
+}
+
+#copy-bttn{
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    left: 1050px;
+    top: 550px;
+        
+    background: #D8DFE8;
+    border-radius: 24px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #0A3871;     
+}
+
+footer{
+    
+}

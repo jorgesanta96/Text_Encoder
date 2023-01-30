@@ -1,92 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Encoder</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Encoder</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-    <main>
-        <input type="text" id="input-text" placeholder="Ingrese el texto aqui">
+    <body>
 
-        <button id="encrypt-bttn">Encriptar</button>
-        <button id="decrypt-bttn">Desencriptar</button>
+        <main>
+            <img id="alura-logo" src="images/alura_logo.png" alt="alura_logo">
 
-        <div id="result-text">
-            
-        </div>
+            <img id="alerta-img" src="images/alerta_imagen.png" alt="alerta_simbolo">
+            <p class="info-message">Solo letras minúsculas y sin acentos</p>
+            <input type="text" id="input-text" placeholder="Ingrese el texto aqui">
 
-        <button id="copy-bttn">Copiar</button>
+            <button id="encrypt-bttn">Encriptar</button>
+            <button id="decrypt-bttn">Desencriptar</button>
 
-    </main>
+            <div id="result-text">
+                
+            </div>
 
-    <footer>
-        <p>&copy Copyright Jorge Andres Salazar Santa 2023</p>
-        <p>Imagenes con links de Github, linkedIn</p>
-    </footer>
+            <button id="copy-bttn">Copiar</button>
 
-    <script>
+        </main>
 
-        function encryptText () {
-            var inputText = document.getElementById('input-text').value;
-            var resultText = document.getElementById("result-text");
-            var result = '';
+        <footer>
+            <p>&copy Copyright Jorge Andres Salazar Santa 2023</p>
+            <p>Imagenes con links de Github, linkedIn</p>
+        </footer>
 
-            for (var i = 0; i < inputText.length; i++) {
-                if (inputText[i] == 'e') {
-                    result += 'enter';
-                } 
-                else if (inputText[i] == 'i') {
-                    result += 'imes';
+        <script>
+
+            function encryptText () {
+                var inputText = document.getElementById('input-text').value;
+                var resultText = document.getElementById("result-text");
+                var result = '';
+
+                for (var i = 0; i < inputText.length; i++) {
+                    if (inputText[i] == 'e') {
+                        result += 'enter';
+                    } 
+                    else if (inputText[i] == 'i') {
+                        result += 'imes';
+                    }
+                    else if (inputText[i] == 'a') {
+                        result += 'ai';
+                    }
+                    else if (inputText[i] == 'o') {
+                        result += 'ober';
+                    }
+                    else if (inputText[i] == 'u') {
+                        result += 'ufat';
+                    }
+                    else {
+                        result += inputText[i];
+                    }
                 }
-                else if (inputText[i] == 'a') {
-                    result += 'ai';
-                }
-                else if (inputText[i] == 'o') {
-                    result += 'ober';
-                }
-                else if (inputText[i] == 'u') {
-                    result += 'ufat';
-                }
-                else {
-                    result += inputText[i];
-                }
+
+                resultText.innerHTML = result;
             }
 
-            resultText.innerHTML = result;
-        }
+            var encryptBttn = document.getElementById('encrypt-bttn');
+            encryptBttn.onclick = encryptText;
 
-        var encryptBttn = document.getElementById('encrypt-bttn');
-        encryptBttn.onclick = encryptText;
+            function decryptText () {
+                var inputText = document.getElementById('input-text').value;
+                var resultText = document.getElementById("result-text");
 
-        function decryptText () {
-            var inputText = document.getElementById('input-text').value;
-            var resultText = document.getElementById("result-text");
+                inputText = inputText.replaceAll('enter', 'e');
+                inputText = inputText.replaceAll('imes', 'i');
+                inputText = inputText.replaceAll('ai', 'a');
+                inputText = inputText.replaceAll('ober', 'o');
+                inputText = inputText.replaceAll('ufat', 'u');
 
-            inputText = inputText.replaceAll('enter', 'e');
-            inputText = inputText.replaceAll('imes', 'i');
-            inputText = inputText.replaceAll('ai', 'a');
-            inputText = inputText.replaceAll('ober', 'o');
-            inputText = inputText.replaceAll('ufat', 'u');
+                resultText.innerHTML = inputText;
+            }
 
-            resultText.innerHTML = inputText;
-        }
+            var decryptBttn = document.getElementById('decrypt-bttn');
+            decryptBttn.onclick = decryptText;
 
-        var decryptBttn = document.getElementById('decrypt-bttn');
-        decryptBttn.onclick = decryptText;
+            function copyText() {
+                var text = document.getElementById('result-text').innerText;
 
-        function copyText() {
-            var text = document.getElementById('result-text').innerText;
+                var inputText = document.getElementById('input-text');
+                inputText.value = text;
+            }
 
-            var inputText = document.getElementById('input-text');
-            inputText.value = text;
-        }
+            var copyBttn = document.getElementById('copy-bttn');
+            copyBttn.onclick = copyText;
 
-        var copyBttn = document.getElementById('copy-bttn');
-        copyBttn.onclick = copyText;
-
-    </script>
-    
-</body>
+        </script>
+        
+    </body>
 </html>
