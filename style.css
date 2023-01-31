@@ -54,8 +54,8 @@ header{
 }
 
 #encrypt-bttn{  
-    margin-right: 2%;
-    width: 328px;
+    margin-right: 3%;
+    width: 300px;
     height: 67px;        
     background: #0A3871;
     border-radius: 24px;
@@ -70,8 +70,9 @@ header{
 }
 
 #decrypt-bttn{
-    width: 328px;
+    width: 300px;
     height: 67px;
+    margin-right: 3%;
     background: #D8DFE8;
     border-radius: 24px;
 
@@ -82,6 +83,13 @@ header{
     text-align: center;
 
     color: #0A3871;    
+}
+
+#reload-bttn{
+    width: 50px;
+    height: 50px;
+    background: #D8DFE8;
+    border-radius: 10px;
 }
 
 #result-div{
@@ -105,7 +113,6 @@ header{
 #result-text{
     text-align: center;
     padding: 0 20px;
-    font-weight: bold;
 }
 
 #second-info-text{
@@ -115,7 +122,7 @@ header{
 }
 
 #copy-bttn{
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 82%;
     left: 68%;
