@@ -5,31 +5,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Text Encoder</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
     </head>
 
     <body>
 
-        <main>
+        <header>
             <img id="alura-logo" src="images/alura_logo.png" alt="alura_logo">
 
-            <img id="alerta-img" src="images/alerta_imagen.png" alt="alerta_simbolo">
-            <p class="info-message">Solo letras minúsculas y sin acentos</p>
-            <input type="text" id="input-text" placeholder="Ingrese el texto aqui">
+            <h1 id="page-title"> Challenge Alura Oracle - Encriptador de Texto </h1>
+        </header>
 
-            <button id="encrypt-bttn">Encriptar</button>
-            <button id="decrypt-bttn">Desencriptar</button>
+        <main>
+            <div id="input-div">
+                <img id="alerta-img" src="images/alerta_imagen.png" alt="alerta_simbolo">
 
-            <div id="result-text">
-                
+                <p class="info-message">Solo letras minúsculas y sin acentos</p>
+
+                <textarea id="input-text" cols="50" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+
+                <!-- <input type="text" id="input-text" placeholder="Ingrese el texto aqui"> -->
+            
+                <button id="encrypt-bttn">Encriptar</button>
+                <button id="decrypt-bttn">Desencriptar</button>
             </div>
 
-            <button id="copy-bttn">Copiar</button>
+            <div id="result-div">
+                <p id="result-text">
+                    <img src="images/fail-image.png" height="200px"><br><br>
+                    Ningun mensaje fue encontrado<br>
+                    <span id="second-info-text">Ingresa el texto que deseas Encriptar o Desencriptar</span>
+                </p>
+                <button id="copy-bttn">Copiar</button>
+            </div>
 
         </main>
 
         <footer>
-            <p>&copy Copyright Jorge Andres Salazar Santa 2023</p>
-            <p>Imagenes con links de Github, linkedIn</p>
+            <p>&copy Copyright 2023 - Jorge Andres Salazar Santa</p>
         </footer>
 
         <script>

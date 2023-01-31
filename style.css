@@ -1,77 +1,66 @@
 body{
     background: #E5E5E5;
+    font-family: 'Arvo', serif;
 }
 
-#alura-logo {
-    /* position: absolute; */
-    left: 36.67%;
-    right: 37.43%;
-    top: 0%;
-    bottom: 0%;
+header{
+    padding: 20px 20px;
 }
 
-#alerta-img {
-    position: absolute;
-    left: 240px;
-    top: 140px;
-}
-
-.info-message{
-    position: absolute;
-    left: 260px;
-    top: 115px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-size: 20px;
-    line-height: 150%;
-
-    color: darkblue;
-    font-weight: bold;
-
-    opacity: 0.8;
-}
-
-#input-text {
-    position: absolute;
-    width: 40%;
-    height: 48px;
-    left: 240px;
-    top: 168px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;    
+#page-title{
+    display: inline;
+    margin-left: 6.3%;
+    text-align: center;
     color: #0A3871;
 }
 
-#result-text{
-    position: absolute;
-    width: 400px;
-    height: 80%;
-    left: 1000px;
-    top: 40px;
-
-    background: #FFFFFF;
-
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
+#input-div{
+    float: left;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-bottom: 2%;
 }
 
-#encrypt-bttn{   
+#alerta-img{
+    height: 15px;
+    margin-right: 5px;
+}
+
+.info-message{
+    display: inline;
+    font-size: 15px;
+    color: darkblue;
+}
+
+#input-text {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    
+    font-family: 'Arvo', serif;
+    font-size: 25px;
+    line-height: 150%;
+    color: #0A3871;
+
+    border-style: none;
+    background: none;
+    /* height: 300px;
+    width: 650px; */
+}
+
+#input-text::placeholder{
+    color: #0A3871;
+    opacity: 0.5;
+}
+
+#encrypt-bttn{  
+    margin-right: 2%;
     width: 328px;
-    height: 67px;
-    position: absolute;
-    left: 240px;
-    top: 560px;
-        
+    height: 67px;        
     background: #0A3871;
     border-radius: 24px;
 
-    font-family: 'Inter';
-    font-style: normal;
+    font-family: 'Arvo', serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -83,15 +72,10 @@ body{
 #decrypt-bttn{
     width: 328px;
     height: 67px;
-    position: absolute;
-    left: 600px;
-    top: 560px;
-        
     background: #D8DFE8;
     border-radius: 24px;
 
-    font-family: 'Inter';
-    font-style: normal;
+    font-family: 'Arvo', serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -100,26 +84,58 @@ body{
     color: #0A3871;    
 }
 
+#result-div{
+    float: right;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    margin-right: 5%;
+    width: 500px;
+    height: 520px;
+    background: #FFFFFF;
+
+    font-family: 'Arvo', serif;
+    font-size: 25px;
+    line-height: 150%;
+    color: #0A3871;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+#result-text{
+    text-align: center;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+#second-info-text{
+    font-weight: normal;
+    font-size: 15px;
+    color: gray;
+}
+
 #copy-bttn{
+    /* display: none; */
+    position: absolute;
+    top: 82%;
+    left: 68%;
     width: 300px;
     height: 50px;
-    position: absolute;
-    left: 1050px;
-    top: 550px;
-        
     background: #D8DFE8;
     border-radius: 24px;
 
-    font-family: 'Inter';
-    font-style: normal;
+    font-family: 'Arvo', serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
 
-    color: #0A3871;     
+    color: #0A3871;
 }
 
 footer{
-    
+    clear: left;
+    text-align: center;
+    color: #0A3871;
+    font-weight: bold;
 }
