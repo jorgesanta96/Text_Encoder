@@ -18,7 +18,7 @@ header{
     float: left;
     margin-top: 3%;
     margin-left: 10%;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
 #alerta-img{
@@ -95,7 +95,7 @@ header{
 #result-div{
     float: right;
     margin-top: 3%;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
     margin-right: 5%;
     width: 500px;
     height: 520px;
@@ -145,4 +145,12 @@ footer{
     text-align: center;
     color: #0A3871;
     font-weight: bold;
+}
+
+.copyright{
+    display: inline;
+}
+
+a{
+    text-decoration: none;
 }
