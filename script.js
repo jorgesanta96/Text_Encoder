@@ -35,9 +35,6 @@ function encryptText () {
     resultText.innerHTML = result;
     copyBttn.style.display = 'block';
 
-    resultText.style.color = '#0A3871';
-    resultText.style.background = '#FFFFFF';
-
     document.getElementById('input-text').value = '';
 }
 
@@ -58,9 +55,6 @@ function decryptText () {
     resultText.innerHTML = inputText;
     copyBttn.style.display = 'block';
 
-    resultText.style.color = '#0A3871';
-    resultText.style.background = '#FFFFFF';
-
     document.getElementById('input-text').value = '';
 }
 
@@ -69,17 +63,9 @@ decryptBttn.onclick = decryptText;
 
 function copyText() {
     var textToCopy = document.getElementById('result-text');
-    var containerTextToCopy = document.getElementById('result-div');
 
     var inputText = document.getElementById('input-text');
     inputText.value = textToCopy.innerText;
-
-    containerTextToCopy.style.paddingLeft = '20px'
-    textToCopy.style.display = 'inline';
-    textToCopy.style.padding = '0';
-    textToCopy.style.color = 'white';
-    textToCopy.style.background = 'darkblue';
-    textToCopy.style.borderRadius = '10px'
 }
 
 var copyBttn = document.getElementById('copy-bttn');
